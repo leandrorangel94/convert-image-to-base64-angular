@@ -1,0 +1,9 @@
+<label for="file">
+    Select a file
+    <img [src]="imageUrl" alt="Image Review">
+</label>
+<input type="file" id="file" accept="image/*" hidden (change)="onSelectNewFile($event)">
+
+<textarea rows="10" disabled>{{base64}}</textarea>
+
+<button (click)="convertFileToBase64()">Convert Image To Base64</button>
